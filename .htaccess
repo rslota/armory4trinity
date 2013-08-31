@@ -1,0 +1,12 @@
+<IfModule mod_rewrite.c>
+
+RewriteEngine On
+RewriteRule ^images/icon/([a-z0-9A-Z_-]*).[a-z]+$ images/geticon.php?size=51&icon=$1
+RewriteRule ^images/icon([0-9]+)/([a-z0-9A-Z_-]*).[a-z]+$ images/geticon.php?size=$1&icon=$2
+RewriteRule ^images/icon([0-9]+)_gray/([a-z0-9A-Z_-]*).[a-z]+$ images/geticon.php?size=$1&icon=$2&type=gray
+
+RewriteCond %{REQUEST_URI} \.php$
+RewriteCond %{QUERY_STRING} (.*)
+RewriteRule ^(.*)$ $1\?%1&rewrite=1 [QSA,L]
+
+</IfModule>

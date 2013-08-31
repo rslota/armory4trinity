@@ -1,0 +1,39 @@
+  SETUP & CONFIGURATION
+   	I. FILESYSTEM
+        1. Extract directory 64x64 into images/icons/ from images/icons/64x64.zip archive (just type 'unzip 64x64.zip' in 					           images/icons/ dir).
+        2. Create database for armory and put into this database all files contained in sql/armory_YOUR.PATCH.NUMBER.zip archive 
+           !NOTE If you are creating new clean install of Armory, do NOT apply updates from "sql/updates" directory.
+        3. CHMOD all folders in images/ directory to 701 (NOT FILES!)
+        4. CHMOD +w cache/ logs/ images/icon/ for php daemon user
+
+    II. DATABASE SETUP
+    	1. Edit config.php file and enter database information. Everything should be clear.
+        !NOTICE: Armory database is the biggest database, so it should be on localhost.
+
+    III. REALMLIST SETUP
+    	1. Edit config.php file (section named "REALMLIST SETUP")
+        2. For each realm on server type:
+        	"$config['realms'][] = array(ID,HOST,PORT,USER,PASSWORD,DB_NAME,IS_DEFAULT);"
+            ID - Realm ID. The same as ID in realmlist table in realm database. [int]
+            HOST - Host of realm database server. [string]
+            PORT - Port of realm database server. [int]
+            USER - User name for realm database server. [string]
+            PASSWORD - Password for realm database server. [string]
+            DB_NAME - Database name. [string]
+            IS_DEFAULT - Type true if it is defalut realm on server, otherwise - false [bool]
+            	!IMPORTANT: Only ONE realm should be default!
+     IV. SCRIPT SETTINGS
+     	1. Edit config.php file (section named "SCRIPT SETTINGS")
+        2. $config['server_name'] = 'Test Server'; <- There type name of your server
+        3. $config['language_change'] = false; <- true - language changing mode on, false - use default language
+        	!IMPORTANT: PL LANGUAGE FILE IS NOT COMPLATE! (languages/pl.lng)
+        4. $config['cache_status'] = true; <- true - use cache system (recommended)
+		5. $config['mangos_version'] = 2; <- Database version. 2 for 3.1.3 [WotLK], 1 for 3.0.9 [WotLK] or 0 for 2.4.3 [TBC]
+        	!IMPORTANT: The Armory doesnt support 2.4.3 patch yet.
+     V. REQUIREMENTS
+     	1. All requirements are contained in includes/requiremants.xml file. The Armory script will
+           check server for this requiremants automatically.
+
+   BUG REPORT
+   	 I. The Armory script is in beta version, so can not work correctly. Every single bug please report
+     	me to my email adress: roxeon@gmail.com. Thank You :)

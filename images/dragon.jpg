@@ -1,0 +1,23 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="errorpage">
+<head>
+<title></title>
+<style type="text/css">
+@import "/css/_lang/en_us/language.css";
+@import "/css/errors.css";
+</style>
+</head>
+<body class="errorpage">
+<div class="container">
+<h1>File not found.</h1>
+<ul>
+<li>
+<a href="">Return to the Armory</a>
+</li>
+<li>
+<a href="">Return to WorldofWarcraft.com</a>
+</li>
+</ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,574 @@
+/*Achievement*/
+.stat_row { background:url("../images/achievements/zebra_light.jpg") repeat-y; padding:4px 15px;font-size:12px; font-weight:bold; color:#452c00;font-family:Calibri,Trebuchet MS,Arial;text-align:left; }
+.stat_row.zebra { background-image:url("../images/achievements/zebra_dark.jpg"); }
+.stat_row img { vertical-align:middle}
+.stat_row td, .cat_header { padding:4px 10px; }
+.stat_row:hover { background-image:url("../images/achievements/zebra_light_flip.jpg"); }
+.row_b { border-right:1px solid #E7BC4C; }
+.zebra .row_b { border-color:#c19136; }
+.c_stat { text-align:center; }
+.stat_val { width:91px; font-size:11px; line-height:normal; }
+.cat_header { background:url("../images/achievements/zebra_darker.jpg") repeat-y; color:white; font-weight:bold; font-size:110%; padding-left:7px; }
+
+table.achievement            {border: 0px; border-collapse: collapse; border-spacing: 0; width: 842px;}
+table.achievement TD         {vertical-align: top;}
+table.achievement TD.a_cat   {min-width: 169px; width: 169px; font-size: 11px; font-weight: bold;}
+table.achievement TD.a_data  {min-width: 673px; width: 673px; font-size: 14px; text-align: center; padding: 0;}
+table.achievement TD.a_data div {margin: 0 auto;}
+div.spacer {width:10px; visibility:hidden;float:left;}
+div.ach_req ul			  { list-style: square;}
+div.ach_req li			  {color: #333; font-size:12px; text-align:left;}
+div.ach_cshow-sel div.ach_req li.done		  { list-style-image:url(../images/achievements/compl.png);color: #077A10;font-weight: bold;font-size:12px; text-align:left;}
+div.ach_show-sel div.ach_req li.done		  {list-style-image:url(../images/achievements/compl.png);color: #077A10;font-weight: bold;font-size:12px; text-align:left;}
+div.a_topcat              {height: 10px; background: url(../images/achievements/achv_lnav_top.gif); font-size: 1px;}
+div.a_bodycat             {background: url(../images/achievements/achv_lnav_bg.jpg);}
+div.a_bodycat     a       {color: #5B3906; padding: 4px 0px 4px 15px; display: block; text-decoration: none; height: 14px;}
+div.a_bodycat     a.sub   {color: #FFFFFF; padding: 4px 0px 4px 20px; background: transparent; display: none;}
+div.a_bodycat     a:hover {color: #330000;background: url(../images/achievements/h_sel_bg.jpg) no-repeat scroll 50% 50%;}
+div.a_bodycat_sel         {background: url(../images/achievements/achv_sel_sub.jpg) no-repeat scroll 100% 100%;}
+div.a_bodycat_sel a       {color: #FFE46C; padding: 4px 0px 4px 15px; background: url(../images/achievements/achv_lnav_sel.gif) scroll 100% 0 no-repeat; display: block; text-decoration: none; height: 14px;}
+div.a_bodycat_sel a:hover {color: #FFCC00;}
+div.a_bodycat_sel a.sub   {color: #FFFFFF; padding: 4px 0px 4px 20px; background: transparent;}
+div.a_bodycat_sel a.sel   {color: #E7D6B8; padding: 4px 0px 4px 20px; background: url(../images/achievements/achv_sub_selected.gif) scroll 100% 0 repeat-y;}
+div.a_bottomcat           {height: 4px; background: url(../images/achievements/achv_lnav_btm.gif) scroll 0% 100%; font-size: 1px;}
+
+div.a_topdata           {height: 8px; background: url(../images/achievements/achv_rcol_top.gif) no-repeat; font-size: 1px;}
+div.a_bdydata           {background: url(../images/achievements/achv_rcol_bg.jpg) repeat-y; padding: 2px 0 10px 0; min-height:200px;}
+div.a_btmdata           {height: 5px; background: url(../images/achievements/achv_rcol_btm.gif) no-repeat; font-size: 1px;}
+div.icon-frame { background:url(../images/achievements/fst_iconframe.png) no-repeat; width:56px; height:56px; padding:5px; position:absolute; top:5px; left:10px; }
+div.ach_show                {color: #D8D6BB; background: url(../images/achievements/achievement_bg_locked.jpg) transparent scroll 50% bottom; position: relative; border-top: 1px #74623E solid; width: 673px; padding-bottom: 17px; cursor: pointer;}
+div.ach_show-sel    {color: #000; background: url(../images/achievements/achievement_bg_locked_sel.jpg) transparent scroll 50% bottom; position: relative; border-top: 1px #74623E solid; width: 673px; padding-bottom: 17px; cursor: pointer;}
+div.ach_point  {position: absolute; top: 5px; right: 10px; background: url(../images/achievements/points.png) transparent no-repeat; padding-top: 20px; width: 64px; height: 64px; color: #FFFFCC; font: 18px bold;}
+div.ach_show div.sub_c      {color: #99FFFF;}
+div.ach_cshow               {color: #000000; background: url(../images/achievements/achievement_bg.jpg) transparent scroll 50% bottom; position: relative; border-top: 1px #CC9E4E solid; width: 673px; padding-bottom: 17px; cursor: pointer;}
+div.ach_cshow-sel               {color: #000000; background: url(../images/achievements/achievement_bg_sel.jpg) transparent scroll 50% bottom; position: relative; border-top: 1px #CC9E4E solid; width: 673px; padding-bottom: 17px; cursor: pointer;}
+div.ach_cpoint {position: absolute; top: 5px; right: 10px; background: url(../images/achievements/points_compl.png) transparent no-repeat; padding-top: 20px; width: 64px; height: 64px; color: #FFFFCC; font: 18px bold;}
+div.ach_cshow div.sub_c     {color: #669200;}
+
+div.ach_s_list      {text-align: left; font-size: 12px; color: #000000; padding: 0 20px;}
+div.ach_stat        {width: 32%; padding: 5px 1% 0 0; float: left; font-weight: bold;}
+div.progress-bar-start { float:left;background:url(../images/achievements/progress_cap.jpg); background-position: 0 -20px; width:6px; height:20px;}
+div.progress-bar-start-a { float:left;background:url(../images/achievements/progress_cap.jpg); background-position: 0 0px; width:6px; height:20px;}
+div.progress-bar-end { float:left;background:url(../images/achievements/progress_cap_r.jpg); background-position: 0 -20px; width:6px; height:20px;}
+div.progress-bar-end-a { float:left;background:url(../images/achievements/progress_cap_r.jpg); background-position: 0 0px; width:6px; height:20px;}
+div.ach_bar         { float:left;margin-bottom:10px !important;background: url(../images/achievements/progress_bg.jpg) #1D3A45 repeat-x;position: relative; height: 19px; width:90%;}
+div.ach_bar2         {margin-bottom:10px !important;border: 1px solid #CA8E16; background: #1D3A45 repeat-x;position: relative; height: 15px; width:90%;}
+div.ach_bar div.pr  {color: #FFFFFF; font-size: 11px; font-weight: bold; position: relative; text-align: center;}
+div.ach_bar2 div.pr  {color: #FFFFFF; font-size: 10px; font-weight: bold; position: relative; text-align: center;}
+div.ach_bar div.bar {background: url(../images/achievements/progress_green.jpg); height: 16px; position: absolute; top:2px;left: 0px;}
+div.ach_bar2 div.bar {background: url(../images/achievements/progress_blue.jpg); height: 100%; position: absolute; top:1px;left: 0px;}
+div.a_last_c         {color: #7D6357; font-size: 12px; text-align: left; padding: 0px 10px; text-align: justify; clear: both;}
+div.a_last_c B       {color: #000000;}
+div.a_last_cdate     {color: #000000; float: right; text-align:right; padding-left: 30px; font-weight: bold; font-size: 10px;}
+div.a_last_cdate img {position: relative; top: 2px;}
+
+img.ach_icon    {position: absolute; top: 14px; left: 14px; width: 44px;}
+div.ach_title   {font-weight: bold; padding-top: 12px; width: 70%; text-align: center;}
+div.ach_desc    {padding: 5px; width: 70%; text-align: center;}
+div.ach_date    {font-size: 10px; font-weight: bold; text-align: center;}
+div.ach_req     { color:#333; width: 70%; padding: 5 30px 5px 30px; font-size: 12px; display: none;}
+div.ach_req div.sub_c   {float: left; width: 46%; text-align: left; padding-left: 4%; font-weight: bold;  background: url(../images/achievements/compl.png) transparent no-repeat scroll 0 2px;}
+div.ach_req div.sub_n   {float: left; width: 46%; text-align: left; padding-left: 4%;}
+div.ach_req div.sub_bar {float: left; width:100%; text-align: left;}
+div.ach_reward  {color: #FFFFFF; font-size: 11px; background: url(../images/achievements/title_bg.png) no-repeat scroll 50% 100%; position: absolute; left: 0px; bottom: 0px; width: 100%; text-align: center;}
+
+div.a_stat         {color: #000000; text-align: left; font-weight: bold; font-size: 12px;}
+div.a_stat_field_0 {background: url(../images/achievements/zebra_dark.jpg);  padding: 3px 20px;}
+div.a_stat_field_1 {background: url(../images/achievements/zebra_light.jpg); padding: 3px 20px;}
+div.a_stat_value   {float: right;}
+
+.inner-cont{width:90%;position:relative;z-index:99;margin:0 auto}
+.inner-cont table{margin:0}
+.inner-cont table td{padding:5px 0 0 0}
+.inner-cont table.iht{width:100%}
+.inner-cont table.iht td{padding:0}
+.ihrc,.iht,.ihl{height:45px}
+.iht span{padding:0 0 0 45px;margin:0;height:45px;display:block}
+.iht p{padding:14px 0 0 0;margin:0;font:18px Georgia,"Times New Roman",Times,serif;letter-spacing:-1px}
+.iht{background:url('../images/iht.gif') repeat-x}
+.ihl{background:url('../images/ihl.gif') no-repeat 0 0}
+.ihrc{background:url('../images/ihr.gif') no-repeat 0 0;width:30px !important}
+td.itl,td.it,td.itr,td.ibl,td.ib,td.ibr{height:19px}
+td.itl,td.itr,td.il,td.ir,td.ibl,td.ibr{width:19px}
+td.itl{background:url('../images/tip-top-left.png') no-repeat}
+td.itr{background:url('../images/tip-top-right.png') no-repeat}
+td.it{background:url('../images/tip-top.png') repeat-x}
+td.il{background:url('../images/il.gif') repeat-y}
+td.ir{background:url('../images/ir.gif') repeat-y}
+td.ibg{background:url('../images/ibg.gif') repeat;width:100%;}
+td.ibl{background:url('../images/ibl.gif') no-repeat}
+td.ibr{background:url('../images/ibr.gif') no-repeat}
+td.ib{width:auto;background:url('../images/ib.gif') repeat-x}
+span.faction-alliance{background:url('../images/icons/faction/alliance.gif') no-repeat 8px 8px}
+span.faction-allianceforces{background:url('../images/icons/faction/allianceforces.gif') no-repeat 8px 8px}
+span.faction-outland{background:url('../images/icons/faction/outland.gif') no-repeat 8px 8px}
+span.faction-horde{background:url('../images/icons/faction/horde.gif') no-repeat 8px 8px}
+span.faction-hordeforces{background:url('../images/icons/faction/hordeforces.gif') no-repeat 8px 8px}
+span.faction-steamwheedlecartel{background:url('../images/icons/faction/steamwheedlecartel.gif') no-repeat 8px 8px}
+span.faction-shattrathcity{background:url('../images/icons/faction/shattrathcity.gif') no-repeat 8px 8px}
+span.faction-zother{background:url('../images/icons/faction/zother.gif') no-repeat 8px 8px}
+span.skill-armorproficiencies{background:url('../images/skills/armorproficiencies.gif') no-repeat 8px 8px}
+span.skill-secondaryskills{background:url('../images/skills/secondaryskills.gif') no-repeat 8px 8px}
+span.skill-professions{background:url('../images/skills/professions.gif') no-repeat 8px 8px}
+span.skill-weaponskills{background:url('../images/skills/weaponskills.gif') no-repeat 8px 8px}
+span.skill-classskills{background:url('../images/skills/classskills.gif') no-repeat 8px 8px}
+span.skill-languages{background:url('../images/skills/languages.gif') no-repeat 8px 8px}
+.rep-lbg{background:url('../images/rep-lbg.gif') repeat}
+.rep-lr{background:url('../images/rep-lr.gif') no-repeat 100% 0}
+.rep-ll{background:url('../images/rep-ll.gif') no-repeat 0 0;height:25px}
+.rep-lbg{margin:2px}
+.rep-lbg ul,.rep-lbg li{height:18px;padding:0;margin:0;float:left}
+.rep-lbg ul{list-style:none;margin-left:2px;width:100%}
+.rep-lbg li{margin-top:3px}
+li.faction-name{width:37%}
+.faction-name a,.faction-name a:active,.faction-name a:link{color:#005BA1;text-decoration:none !important;padding:0 0 0 10px}
+.faction-name a:hover{color:#ff0000;text-decoration:none !important; font-weight:bold;padding:0 0 0 10px}
+.faction-name span{text-decoration:none !important;padding:0 0 0 10px;white-space:nowrap}
+li.faction-bar{border:1px solid black;width:35%;height:16px;background:url('../images/rep-bar0.gif') repeat-x;position:relative}
+li.faction-bar:hover{border:1px solid white}
+li.faction-level{width:27%;height:18px;background:url('../images/rep-rbg.gif') no-repeat;position:relative}
+a.rep-data{position:absolute;top:-1px;width:100%;text-align:center;color:white;text-decoration:none !important;white-space:nowrap}
+a.skill-data{position:absolute;top:-1px;width:100%;text-align:center;color:white;text-decoration:none !important}
+.faction-level p{margin:0;padding:0 0 0 40px;position:absolute;top:0;left:4px;height:18px;width:140px;text-transform:uppercase;color:white}
+.bar-color{width:70%;height:16px}
+.rep7 .bar-color{background:url('../images/bar-exalted.gif') repeat-x}
+.rep6 .bar-color{background:url('../images/bar-revered.gif') repeat-x}
+.rep5 .bar-color{background:url('../images/bar-honored.gif') repeat-x}
+.rep4 .bar-color{background:url('../images/bar-friendly.gif') repeat-x}
+.rep3 .bar-color{background:url('../images/bar-neutral.gif') repeat-x}
+.rep2 .bar-color{background:url('../images/bar-unfriendly.gif') repeat-x}
+.rep1 .bar-color{background:url('../images/bar-hostile.gif') repeat-x}
+.rep0 .bar-color{background:url('../images/bar-hated.gif') repeat-x}
+.rep7 p.rep-icon{background:url('../images/icons/faction/exalted.gif') no-repeat 2px 0}
+.rep6 p.rep-icon{background:url('../images/icons/faction/revered.gif') no-repeat 2px 0}
+.rep5 p.rep-icon{background:url('../images/icons/faction/honored.gif') no-repeat 2px 0}
+.rep4 p.rep-icon{background:url('../images/icons/faction/friendly.gif') no-repeat 2px 0}
+.rep3 p.rep-icon{background:url('../images/icons/faction/neutral.gif') no-repeat 2px 0}
+.rep2 p.rep-icon{background:url('../images/icons/faction/unfriendly.gif') no-repeat 2px 0}
+.rep1 p.rep-icon{background:url('../images/icons/faction/hostile.gif') no-repeat 2px 0}
+.rep0 p.rep-icon{background:url('../images/icons/faction/hated.gif') no-repeat 2px 0}
+
+div.char-sheet:hover div.smallframe-a,div.char-sheet:hover div.smallframe-b,div.char-sheet:hover div.smallframe-c {
+	background-position: 0 -23px;
+}
+div.inner-cont table,div.inner-cont td {
+	border:0 none;
+	border-collapse:collapse;
+	margin:0;
+	padding:0;
+}
+div.profile-header {
+	background:url(../images/parch-title-shadow.jpg);
+	width:444px;
+	padding-top:30px !important;
+	font-size:16px;
+	font-weight:bold;
+	height:80px;
+	font-family:"Trebuchet MS",Arial,Helvetica,sans-serif;
+}
+
+div.smallframe-a {
+	background:transparent url(../images/smallframe-a.png) no-repeat scroll left top;
+	cursor:pointer;
+	float:left;
+	height:23px;
+	position:relative;
+	width:20px;
+}
+div.smallframe-c {
+	background:transparent url(../images/smallframe-c.png) no-repeat scroll left top;
+	cursor:pointer;
+	float:left;
+	height:23px;
+	position:relative;
+	width:20px;
+}
+div.smallframe-b {
+	background:transparent url(../images/smallframe-b.png) repeat-x scroll left top;
+	color:#FFF;
+	font-size:12px;
+	width:85px;
+	cursor:pointer;
+	float:left;
+	height:23px;
+	line-height:18px;
+	padding:0 2px 0 5px;
+}
+div.smallframe-b-active {
+	background:transparent url(../images/smallframe-b.png) repeat-x scroll left top;
+	color:#FFD200;
+	font-weight:bold;
+	font-size:12px;
+	width:80px;
+	cursor: default;
+	float:left;
+	height:23px;
+	line-height:18px;
+	padding:0 2px 0 5px;
+}
+.switch-buttons-c {
+	width:665px;
+	text-align:center;
+	margin:auto;
+}
+.profile-header-table {
+	height: 125px;
+	width: 680px;
+	text-align: left;
+	margin:auto;
+	border: 1px ridge #EEDAA4;
+}
+.profile-header-title {
+padding-left: 4px;
+padding-top: 0px;
+}
+.profile-header-title-name {
+font-size: 18pt;
+color: #FFF;
+text-align: left;
+font-family: Georgia, Arial, Helvetica, sans-serif;
+font-weight: bold;
+padding: 0px;
+letter-spacing: -1px;
+}
+.profile-header-title-guild a {
+font-size: 14pt;
+font-family: Georgia, Arial, Helvetica, sans-serif;
+color: #FFC600;
+padding: 0px;
+}
+.profile-header-title-guild:hover a {
+color:#FFE99D;
+text-decoration: none;
+}
+.profile-header-title-info {
+font-size: 8pt;
+font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+color: #FFF;
+font-weight: bold;
+padding: 0px;
+}
+.profile-header {
+padding: 0px;
+width: 68px;
+padding-top: 8px !important;
+}
+/* - Faction - */
+/* 1 */
+.profile-header-1 {
+background: #500 url('../images/profile-tile-horde.jpg') repeat-x top left;
+width: 358px;
+position: relative;
+left: 0px;
+padding-left: 4px;
+padding-top: 4px;
+
+}
+.profile-header-1-right {
+background: #500 url('../images/profile-right-horde.jpg') no-repeat top right;
+width: 358px;
+text-align: right;
+padding-right: 15px;
+padding-top: 26px;
+font-size: 12px;
+font-weight: bold;
+color: #FFF;
+}
+.profile-header-portrait-img-1 {
+border: 2px solid #930000;
+padding: 0px;
+}
+.profile-header-portrait-img-1:hover {
+border: 2px solid #E65B00;
+}
+/* 0 */
+.profile-header-0 {
+background: #005 url('../images/profile-tile-alliance.jpg') repeat-x top left;
+padding-left: 4px;
+padding-top: 4px;
+}
+.profile-header-0-right {
+background: #005 url('../images/profile-right-alliance.jpg') no-repeat top right;
+width: 426px;
+text-align: right;
+padding-right: 22px;
+padding-top: 26px;
+font-size: 12px;
+font-weight: bold;
+color: #FFF;
+}
+.profile-header-portrait-img-0 {
+border: 2px solid #000093;
+padding: 0px;
+}
+.profile-header-portrait-img-0:hover {
+border: 2px solid #005BE6;
+}
+
+
+.profile-content-table {
+padding: 0px;
+width: 700px;
+text-align: center;
+background: url('../images/background.gif');
+}
+.profile-item-table {
+border: 1px solid #000;
+width: 600px;
+text-align: left;
+padding: 0px;
+background: #000;
+
+}
+.profile-table {
+position: relative;
+top: 7px;
+border: none;
+background: #D2B567 url('../images/profile-bg.jpg') no-repeat top center;
+width: 647px;
+height: 458px;
+}
+
+.profile-data {
+padding: 0px;
+padding-right: 14px;
+text-align: center;
+border: none;
+/*background: url('../images/profile/profile-data-bg.jpg') no-repeat top;*/
+width: 390px;
+}
+.profile-spacer-left {
+width: 84px;
+}
+.profile-spacer-right {
+width: 69px;
+}
+
+.profile-spacer-top {
+height: 5px;
+}
+.profile-spacer-bottom {
+height: 10px;
+}
+
+.profile-mini-data {
+background: #222;
+
+font-size: 11px;
+font-weight: bold;
+color: #FFF;
+border: 2px solid #000;
+padding: 3px;
+filter: alpha(opacity=85);
+-moz-opacity: 0.85;
+-moz-border-radius: 5px;
+opacity: 0.85;
+text-align: left;
+font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+
+.character-table {
+	background:url(../images/profile-bg.jpg);
+	width: 647px;
+	height: 458px;
+}
+.item-bg:hover {
+	background:url('../images/item-border.gif') -5px;
+	height:52px;
+	width:52px;
+}
+.item-bg img {
+	width:46px;
+	height:46px;
+	margin:3px;
+}
+
+.stats_left {
+	white-space:nowrap;
+	font-weight:bold;
+}
+.stats_right {
+	text-align:right;
+	white-space:nowrap;
+	font-weight:bold;
+}
+.description {
+	color: #FFD200;
+	font-size: 12px;
+}
+.tooltip-header {
+    font-weight: bold; color: #FFF; font-size: 12px;
+}
+.profs-table h4 {
+	color:white;
+	font-size:10px;
+	margin:0;
+	padding:0 8px;
+	text-transform:uppercase;
+}
+.profs-table td {
+	vertical-align:top;
+}
+.prof-bar {
+	background:#666 url(../images/bar-grey.gif) repeat-x;
+	height:16px;
+	width:100px;
+	border:solid 1px #000;
+	text-align:left;
+	padding:0px;
+}
+.prof-bar div {
+	background: #06F url(../images/bar-mana.gif) repeat-x;
+	height:18px;
+	max-height:18px;
+	font-size:11px;
+	padding:0px;
+}
+.prof-icon {
+	text-align: right;
+}
+.prof-icon img {
+	border:0px;
+}
+.prof-bar div span {
+	position: absolute;
+	text-align: center;
+	width:100px;
+}
+.prof-bar:hover {
+	background:#666 url(../images/bar-grey.gif) repeat-x;
+	height:16px;
+	width:100px;
+	border:solid 1px #06F;
+	text-align:left;
+	padding:0px;
+}
+.skill-bar {
+	background:#666 url(../images/bar-grey.gif) repeat-x;
+	height:16px;
+	width:100px;
+	border:solid 1px #000;
+	text-align:left;
+	padding:0px;
+}
+.skill-bar div {
+	background: #06F url(../images/bar-mana.gif) repeat-x;
+	height:18px;
+	max-height:18px;
+	font-size:11px;
+	padding:0px;
+}
+.skill-bar div span {
+	position: absolute;
+	text-align: center;
+	width:100px;
+}
+.skill-bar:hover {
+	background:#666 url(../images/bar-grey.gif) repeat-x;
+	height:16px;
+	width:100px;
+	border:solid 1px #06F;
+	text-align:left;
+	padding:0px;
+}
+.power-bar {
+	height:16px !important;
+	text-align:center;
+	padding:0;
+	margin:0;
+	font-size:11px;
+	width:250px;
+}
+
+.hp-bar {
+	background:url(../images/bar-life.gif) repeat-x #0F0;
+	border:1px solid #000;;
+}
+.hp-bar:hover {
+	background:url(../images/bar-life.gif) repeat-x #0F0;
+	border:1px solid #0F0;
+	font-weight:bold;
+}
+.mana-bar {
+	background:url(../images/bar-mana.gif) repeat-x #06F;
+	border:1px solid #000;
+}
+.mana-bar:hover {
+	background:url(../images/bar-mana.gif) repeat-x #06F;
+	border:1px solid #0FC;
+	font-weight:bold;
+}
+.energy-bar {
+	background:url(../images/bar-energy.gif) repeat-x #FC0;
+	border:1px solid #000;
+}
+.energy-bar:hover {
+	background:url(../images/bar-energy.gif) repeat-x #FC0;
+	border:1px solid #F90;
+	font-weight:bold;
+}
+.rage-bar {
+	background:url(../images/bar-rage.gif) repeat-x #F00;
+	border:1px solid #000;
+}
+.rage-bar:hover {
+	background:url(../images/bar-rage.gif) repeat-x #F00;
+	border:1px solid #F00;
+	font-weight:bold;
+}
+.runic-bar {
+	background:url(../images/bar-runic.gif) repeat-x #0FF;
+	border:1px solid #000;
+}
+.runic-bar:hover {
+	background:url(../images/bar-runic.gif) repeat-x #0FF;
+	border:1px solid #6FF;
+	font-weight:bold;
+}
+.gold-icon {
+	width:25px;
+	height:25px;
+	border:1px solid #000;
+}
+.gold-icon:hover {
+	width:25px;
+	height:25px;
+	border:1px solid #CC0;
+}
+#stats_1_target td {
+	padding:0px;
+}
+#stats_2_target td {
+	padding:0px;
+}
+.more-info {
+	padding:0px;margin:0px;
+
+}
+.more-info td {
+	text-align:left;
+}
+.more-info span {
+	text-transform:uppercase;
+	font-size:12px;
+	border:solid 2px #000;
+	padding-left: 3px;
+	padding-right: 3px;
+}
+.more-info span:hover {
+	text-transform:uppercase;
+	font-size:12px;
+	border:solid 2px #CC0;
+	padding-left: 3px;
+	padding-right: 3px;
+}
+select.stats {
+	background: #333;
+	border:1px solid #000;
+	color:#FFF;
+}
+select.stats:focus {
+	background: #666;
+	border:1px solid #FFF;
+	color:#FFF;
+}

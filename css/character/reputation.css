@@ -1,0 +1,95 @@
+@charset "utf-8";
+/* reputations & skills */
+/*...........................................................*/
+.inner-cont{width:90%;position:relative;z-index:99;margin:0 auto}
+.inner-cont table{margin:0;width:100%}
+.inner-cont table td{padding:5px 0 0 0}
+.inner-cont table.iht{width:100%}
+.inner-cont table.iht td{padding:0}
+.ihrc,.iht,.ihl{height:45px}
+.iht span{padding:0 0 0 45px;margin:0;height:45px;display:block}
+.iht p{padding:14px 0 0 0;margin:0;font:18px Georgia,"Times New Roman",Times,serif;letter-spacing:-1px}
+a.toggle-icon{display:block;background:url("../../images/icons/more-minus.gif") no-repeat;width:11px;height:11px}
+a.toggle-icon{position:absolute;top:15px;right:15px}
+.iht{background:url("../../images/iht.gif") repeat-x}
+.ihl{background:url("../../images/ihl.gif") no-repeat 0 0}
+.ihrc{background:url("../../images/ihr.gif") no-repeat 100% 0;width:30px !important}
+td.itl,td.it,td.itr,td.ibl,td.ib,td.ibr{height:19px}
+td.itl,td.itr,td.il,td.ir,td.ibl,td.ibr{width:19px}
+td.itl{background:url("../../images/tip-top-left.png") no-repeat}
+td.itr{background:url("../../images/tip-top-right.png") no-repeat}
+td.it{background:url("../../images/tip-top.png") repeat-x}
+td.il{background:url("../../images/il.gif") repeat-y}
+td.ir{background:url("../../images/ir.gif") repeat-y}
+td.ibg{background:url("../../images/ibg.gif") repeat}
+td.ibl{background:url("../../images/ibl.gif") no-repeat}
+td.ibr{background:url("../../images/ibr.gif") no-repeat}
+td.ib{width:auto;background:url("../../images/ib.gif") repeat-x}
+span.faction-alliance{background:url("../../images/icons/faction/alliance.gif") no-repeat 8px 8px}
+span.faction-allianceforces{background:url("../../images/icons/faction/allianceforces.gif") no-repeat 8px 8px}
+span.faction-outland{background:url("../../images/icons/faction/outland.gif") no-repeat 8px 8px}
+span.faction-horde{background:url("../../images/icons/faction/horde.gif") no-repeat 8px 8px}
+span.faction-hordeforces{background:url("../../images/icons/faction/hordeforces.gif") no-repeat 8px 8px}
+span.faction-steamwheedlecartel{background:url("../../images/icons/faction/steamwheedlecartel.gif") no-repeat 8px 8px}
+span.faction-shattrathcity{background:url("../../images/icons/faction/shattrathcity.gif") no-repeat 8px 8px}
+span.faction-zother{background:url("../../images/icons/faction/zother.gif") no-repeat 8px 8px}
+span.skill-armorproficiencies{background:url("../../images/icons/skills/armorproficiencies.gif") no-repeat 8px 8px}
+span.skill-secondaryskills{background:url("../../images/icons/skills/secondaryskills.gif") no-repeat 8px 8px}
+span.skill-professions{background:url("../../images/icons/skills/professions.gif") no-repeat 8px 8px}
+span.skill-weaponskills{background:url("../../images/icons/skills/weaponskills.gif") no-repeat 8px 8px}
+span.skill-classskills{background:url("../../images/icons/skills/classskills.gif") no-repeat 8px 8px}
+span.skill-languages{background:url("../../images/icons/skills/languages.gif") no-repeat 8px 8px}
+.rep-lbg{background:url("../../images/rep-lbg.gif") repeat}
+.rep-lr{background:url("../../images/rep-lr.gif") no-repeat 100% 0}
+.rep-ll{background:url("../../images/rep-ll.gif") no-repeat 0 0;height:25px}
+.rep-lbg{margin:2px}
+.rep-lbg ul,.rep-lbg li{height:18px;padding:0;margin:0;float:left}
+.rep-lbg ul{list-style:none;margin-left:2px;width:100%}
+.rep-lbg li{margin-top:3px}
+li.faction-name{width:37%}
+.faction-name a,.faction-name a:active,.faction-name a:link{text-decoration:none !important;padding:0 0 0 10px}
+.faction-name span{text-decoration:none !important;padding:0 0 0 10px;white-space:nowrap}
+li.faction-bar{border:1px solid black;width:35%;height:16px;background:url("../../images/rep-bar0.gif") repeat-x;position:relative}
+li.faction-bar:hover{border:1px solid white}
+.skill-length{width:54% !important}
+li.faction-level{width:27%;height:18px;background:url("../../images/rep-rbg.gif") no-repeat;position:relative}
+li.skill-level{display:none}
+a.rep-data{position:absolute;top:-1px;width:100%;text-align:center;color:white;text-decoration:none !important;white-space:nowrap}
+a.rep-data:hover{color:white}
+a.skill-data{position:absolute;top:-1px;width:100%;text-align:center;color:white;text-decoration:none !important}
+.faction-level p{margin:0;padding:0 0 0 40px;position:absolute;top:0;left:4px;height:18px;width:140px;text-transform:uppercase;color:white}
+.bar-color{width:70%;height:16px}
+.rep7 .bar-color{background:url("../../images/bar-exalted.gif") repeat-x}
+.rep6 .bar-color{background:url("../../images/bar-revered.gif") repeat-x}
+.rep5 .bar-color{background:url("../../images/bar-honored.gif") repeat-x}
+.rep4 .bar-color{background:url("../../images/bar-friendly.gif") repeat-x}
+.rep3 .bar-color{background:url("../../images/bar-neutral.gif") repeat-x}
+.rep2 .bar-color{background:url("../../images/bar-unfriendly.gif") repeat-x}
+.rep1 .bar-color{background:url("../../images/bar-hostile.gif") repeat-x}
+.rep0 .bar-color{background:url("../../images/bar-hated.gif") repeat-x}
+.rep7 p.rep-icon{background:url("../../images/icons/faction/exalted.gif") no-repeat 2px 0}
+.rep6 p.rep-icon{background:url("../../images/icons/faction/revered.gif") no-repeat 2px 0}
+.rep5 p.rep-icon{background:url("../../images/icons/faction/honored.gif") no-repeat 2px 0}
+.rep4 p.rep-icon{background:url("../../images/icons/faction/friendly.gif") no-repeat 2px 0}
+.rep3 p.rep-icon{background:url("../../images/icons/faction/neutral.gif") no-repeat 2px 0}
+.rep2 p.rep-icon{background:url("../../images/icons/faction/unfriendly.gif") no-repeat 2px 0}
+.rep1 p.rep-icon{background:url("../../images/icons/faction/hostile.gif") no-repeat 2px 0}
+.rep0 p.rep-icon{background:url("../../images/icons/faction/hated.gif") no-repeat 2px 0}
+img.ieimg{display:none}
+a.copy-link,a.copy-link-character,a.pin-link{background:url("../../images/copy-link-tile.gif") repeat-x 0 0;height:27px;position:absolute;display:block;text-decoration:none !important;cursor:pointer;z-index:99999}
+a.copy-link{top:-27px;right:2px}
+a.copy-link-character{top:-27px;right:-10px}
+a.pin-link{top:-27px}
+.pin-link-off{display:none}
+.copy-link-left{background:url("../../images/copy-link-left.gif") no-repeat 0 0;display:block;float:left;cursor:pointer}
+a.copy-link b,a.copy-link-character b,a.pin-link b{padding:8px 40px 0 40px;display:block;text-transform:uppercase;text-decoration:none !important;font-style:normal;color:black !important;background:url("../../images/copy-link-button.gif") no-repeat 100% 0;cursor:pointer}
+a.pin-link b{background:url("../../images/pin-link-button.gif") no-repeat 100% 0 !important}
+a.pin-link:hover b,a.copy-link-character:hover b,a.copy-link:hover b{background-position:100% -27px !important}
+a.copy-link:hover .copy-link-left,a.pin-link:hover .copy-link-left,a.copy-link-character:hover .copy-link-left{background-position:0 -27px}
+a.copy-link:hover,a.copy-link-character:hover,a.pin-link:hover{color:black !important;background-position:0 -27px !important}
+.clink-bg{padding:8px !important;background:white;position:relative;z-index:10}
+.clink-bg p{padding:1px 0;margin:0}
+.clink-bg input{background:url("../../images/parch-search-bg1.gif") repeat-x 0 0;border:1px solid #9d780b;height:15px;color:black;padding-left:3px;width:90%;margin:0 0 0 2px}
+a.close-link,a.close-link:visited,a.close-link:active,a.close-link:link{padding:0px !important;background:url("../../images/close-btn.gif") no-repeat 0 0 !important;width:20px !important;height:20px;display:block;position:absolute;z-index:12;top:2px;right:3px}
+a.close-link:hover{background:url("../../images/close-btn.gif") no-repeat 0 -20px !important}
+a.copy-link strong,a.pin-link strong,a.copy-link-character strong{padding:8px 40px 0 40px;display:block;text-transform:uppercase;text-decoration:none;font-style:normal;color:white;cursor:pointer;position:absolute;top:-1px;left:-1px}

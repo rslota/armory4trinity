@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<requirements>
+	<php minversion="5.0.0"/>
+	<settings>	
+		
+	</settings>
+	<packages>
+		<package name="gd"/>
+		<package name="mysql"/>
+	</packages>
+	
+	<database>
+		<table name="armory_info"/>
+		<table name="itemicon"/>
+		<table name="achievement"/>
+		<table name="achievement_criteria"/>
+		<table name="achievement_category"/>
+		<table name="faction"/>
+		<table name="itemenchant"/>
+		<table name="skillline"/>
+		<table name="skilllinecategory"/>
+		<table name="spell"/>
+		<table name="spellicon"/>
+		<table name="spellduration"/>
+		<table name="talent"/>
+		<table name="talenttab"/>
+		<table name="spellradius"/>
+	</database>
+		
+</requirements>
