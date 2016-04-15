@@ -444,7 +444,6 @@ Date.dateTimeFormat = 'dd/mm/yyyy g:i:s';
 	 * @name asString
 	 * @type Date
 	 * @cat Plugins/Methods/Date
-	 * @author EVANGELIA DENDRAMIS
 	 */
 	add("asUTCTime", function() {
 		var r = Date.dateTimeFormat;
